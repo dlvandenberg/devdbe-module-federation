@@ -1,0 +1,40 @@
+.header {
+    background: #FF715B;
+    padding: 20px;
+
+    .header__link {
+        text-decoration: none;
+        color: #FBF5F3;
+        padding: 15px 5px;
+
+        &:active,
+        &:hover {
+            background: darken(#FF715B, 2);
+            border-radius: 5px;
+            color: darken(#FF715B, 30);
+        }
+    }
+
+    > .brand {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 20px;
+    }
+
+    .navbar {
+        display: inline-block;
+        text-align: right;
+        vertical-align: middle;
+    
+        .navbar__items {
+            list-style: none;
+            margin: 0; 
+            padding: 0;
+        }
+    
+        .navbar__item {
+            display: inline-block;
+        }
+    }
+}
+
