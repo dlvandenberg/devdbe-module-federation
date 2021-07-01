@@ -1,0 +1,16 @@
+<h1>Component Factory</h1>
+<p>This component will load the remote bundle from MFE2 and programmatically construct a component from that module.</p>
+<p>The component below is created from the remote module:</p>
+
+<div class="remote-container">
+    <app-remote
+        remoteEntry="http://localhost:4202/remoteEntry.js"
+        remoteName="mfe2"
+        exposedModule="./AnotherModule"
+        componentName="BarComponent"
+        moduleName="AnotherModule"
+        [props]="{
+            name: 'MainApp'
+        }"
+    ></app-remote>
+</div>

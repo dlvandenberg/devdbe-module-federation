@@ -16,6 +16,10 @@ const routes: Routes = [
       remoteName: 'mfe1',
       exposedModule: './SomeModule'
     }).then(m => m.SomeModule)
+  },
+  {
+    path: 'mfe2',
+    loadChildren: () => import('./dynamic/dynamic.module').then(m => m.DynamicModule)
   }
 ];
 
