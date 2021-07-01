@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EnvironmentService, ModuleConfig } from '../../services/environment/environment.service';
 
 @Component({
   selector: 'app-factory',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FactoryComponent implements OnInit {
 
-  constructor() { }
+  public hasModule = false;
+  public moduleConfig: ModuleConfig;
 
-  ngOnInit(): void {
+  constructor(public readonly environmentService: EnvironmentService) { }
+
+  public ngOnInit(): void {
+    if (this.environmentService.hasModuleWithName('mfe2')) {
+      this.hasModule = true;
+      this.moduleConfig = this.environmentService.getModuleConfiguration('mfe2');
+    }
   }
 
 }

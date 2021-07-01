@@ -2,10 +2,10 @@
 <p>This component will load the remote bundle from MFE2 and programmatically construct a component from that module.</p>
 <p>The component below is created from the remote module:</p>
 
-<div class="remote-container">
+<div class="remote-container" *ngIf="hasModule; else notLoaded">
     <app-remote
-        remoteEntry="http://localhost:4202/remoteEntry.js"
-        remoteName="mfe2"
+        [remoteEntry]="moduleConfig.remoteEntry"
+        [remoteName]="moduleConfig.remoteName"
         exposedModule="./AnotherModule"
         componentName="BarComponent"
         moduleName="AnotherModule"
@@ -14,3 +14,6 @@
         }"
     ></app-remote>
 </div>
+<ng-template #notLoaded>
+    The remote module was not loaded, because the configuration was not found in window.__env.
+</ng-template>

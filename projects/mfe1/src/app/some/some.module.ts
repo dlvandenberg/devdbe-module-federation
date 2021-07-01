@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FooComponent } from '../foo/foo.component';
+import { FooComponent } from './foo/foo.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({

@@ -3,8 +3,7 @@ import { Compiler, Component, Injector, Input, NgModuleRef, OnInit, ViewChild, V
 
 @Component({
   selector: 'app-remote',
-  templateUrl: './remote.component.html',
-  styleUrls: ['./remote.component.scss']
+  templateUrl: './remote.component.html'
 })
 export class RemoteComponent implements OnInit {
   @ViewChild('remote', { read: ViewContainerRef })
@@ -25,7 +24,6 @@ export class RemoteComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    // TODO check via service if component can be loaded.
     this.loadModule();
   }
 
