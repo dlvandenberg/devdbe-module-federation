@@ -54,4 +54,5 @@ The idea is that during deployment, you overwrite the contents from `env.js`, an
 # Food for thought
 - How can you share state between these microfrontends. Do you need a store solution for that? (NgRx)
 - How can you push input property updates to a microfrontend?
+- Deploy
 - What happens to the console.logs from the microfrontends when they are loaded into the main application?
